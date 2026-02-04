@@ -45,3 +45,9 @@ jobs:
       - name: Build and test with Maven
         run: mvn -B package --file pom.xml -Dquarkus.datasource.reactive.url=vertx-reactive:postgresql://localhost:5432/measdb
         working-directory: backend
+
+      - name: Upload resulting Build package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Package
+          path: backend/target
