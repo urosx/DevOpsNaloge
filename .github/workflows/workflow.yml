@@ -7,3 +7,8 @@ on:
     branches: [ "**" ]
 
 jobs:
+  hello:
+     name: Hello job
+     runs-on: ubuntu-latest
+     steps:
+       - run: echo "Hello"
